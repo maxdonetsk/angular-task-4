@@ -6,7 +6,8 @@
                 'ui.bootstrap',
                 'ui.router',
                 'ngSanitize',
-                'ui.select'])
+                'ui.select',
+                'angularUtils.directives.dirPagination'])
             .config(['$urlRouterProvider', function ($urlRouterProvider) {
                     $urlRouterProvider.otherwise('dashboard');
                 }])
@@ -18,6 +19,8 @@
                                     content: {templateUrl: 'app/dashboard/dashboard.html'}
                                 }
                             });
-                }]);
-    ;
+                }])
+            .config(function (paginationTemplateProvider) {
+                paginationTemplateProvider.setPath('/bower_components/angularUtils-pagination/dirPagination.tpl.html');
+            });
 }());

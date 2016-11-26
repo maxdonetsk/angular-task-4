@@ -12,6 +12,7 @@
         vm.actors = [];
         vm.films = [];
         vm.selected = {};
+        vm.currentPage = 1;
 
         vm.onSubmit = onSubmit;
 
@@ -54,8 +55,8 @@
         function onSubmit(searchForm) {
             if (searchForm.$valid) {
                 MoviesFactory.getFilms(vm.selected)
-                        .then(function (data) {
-                            data;
+                        .then(function (films) {
+                            vm.films = films;
                         })
                         .catch(function (error) {
                             error;

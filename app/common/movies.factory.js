@@ -44,10 +44,25 @@
                         var deferred = $q.defer();
                         var url = BaseURL;
                         url = url + 'films';
+
                         if (!!params.language && url.indexOf('?') > -1) {
-                            url = url + '&language=' + params.language.name.toLowerCase();
-                        } else {
-                            url = url + '?language=' + params.language.name.toLowerCase();
+                            url = url + '&language=' + params.language.name;
+                        } else if (!!params.language) {
+                            url = url + '?language=' + params.language.name;
+                        }
+
+                        if (!!params.category && url.indexOf('?') > -1) {
+                            url = url + '&category=' + params.category.name;
+                        } else if (!!params.category) {
+                            url = url + '?category=' + params.category.name;
+                        }
+
+                        if (!!params.actor && url.indexOf('?') > -1) {
+                            url = url + '&first=' + params.actor.first_name;
+                            url = url + '&last=' + params.actor.last_name;
+                        } else if (!!params.actor) {
+                            url = url + '?first=' + params.actor.first_name;
+                            url = url + '&first=' + params.actor.last_name;
                         }
 
                         $http.get(url)
