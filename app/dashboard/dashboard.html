@@ -60,83 +60,63 @@
         </div>
     </div>
 
-
-
-
-    <div>
-
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="#table" aria-controls="table" role="tab" data-toggle="tab">Table</a></li>
-            <li role="presentation"><a href="#charts" aria-controls="charts" role="tab" data-toggle="tab">Charts</a></li>
-        </ul>
-
-        <!-- Tab panes -->
-        <div class="tab-content">
-            <div role="tabpanel" class="tab-pane fade in active" id="table">
-            
-            
-                <div class="row">
-                    <div class="col-xs-12">
-                        <dir-pagination-controls max-size="10"
-                                                 on-page-change="vm.pageChanged(newPageNumber)"
-                                                 boundary-links="true"></dir-pagination-controls>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="table-responsive" id="ms-table">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th width="10%">Title</th>
-                                        <th width="20%">Description</th>
-                                        <th>Category</th>
-                                        <th>Release Year</th>
-                                        <th>Language</th>
-                                        <th>Length</th>
-                                        <th>Rating</th>
-                                        <th width="20%">Actors</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr dir-paginate="film in vm.films | filter: vm.search | itemsPerPage: 50"
-                                        current-page="vm.currentPage">
-                                        <td>{{film.title}}</td>
-                                        <td>{{film.description}}</td>
-                                        <td>{{film.category}}</td>
-                                        <td>{{film.release_year}}</td>
-                                        <td>{{film.language}}</td>
-                                        <td>{{film.length}}</td>
-                                        <td>{{film.rating}}</td>
-                                        <td>{{film.actors}}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <dir-pagination-controls max-size="10"
-                                                 on-page-change="vm.pageChanged(newPageNumber)"
-                                                 boundary-links="true"></dir-pagination-controls>
-                    </div>
-                </div>
-            
-            
-            
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="charts">
-                
-                Charts
+    <div class="row">
+        <div class="col-xs-12">
+            <dir-pagination-controls max-size="10"
+                                     on-page-change="vm.pageChanged(newPageNumber)"
+                                     boundary-links="true"></dir-pagination-controls>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="table-responsive" id="ms-table">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th width="10%">Title</th>
+                            <th width="20%">Description</th>
+                            <th>Category</th>
+                            <th>Release Year</th>
+                            <th>Language</th>
+                            <th>Length</th>
+                            <th>Rating</th>
+                            <th width="20%">Actors</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr dir-paginate="film in vm.films | filter: vm.search | itemsPerPage: 50"
+                            current-page="vm.currentPage">
+                            <td>{{film.title}}</td>
+                            <td>{{film.description}}</td>
+                            <td>{{film.category}}</td>
+                            <td>{{film.release_year}}</td>
+                            <td>{{film.language}}</td>
+                            <td>{{film.length}}</td>
+                            <td>{{film.rating}}</td>
+                            <td>{{film.actors}}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <dir-pagination-controls max-size="10"
+                                     on-page-change="vm.pageChanged(newPageNumber)"
+                                     boundary-links="true"></dir-pagination-controls>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <nvd3 options="vm.categoriesChartOptions" data="vm.categoriesChartData"></nvd3>
+        </div>
     </div>
 
 
 
 
-    
+
+
+
 </div>

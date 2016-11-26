@@ -7,7 +7,8 @@
                 'ui.router',
                 'ngSanitize',
                 'ui.select',
-                'angularUtils.directives.dirPagination'])
+                'angularUtils.directives.dirPagination',
+                'nvd3'])
             .config(['$urlRouterProvider', function ($urlRouterProvider) {
                     $urlRouterProvider.otherwise('dashboard');
                 }])
