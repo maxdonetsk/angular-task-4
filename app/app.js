@@ -22,6 +22,7 @@
                             });
                 }])
             .config(function (paginationTemplateProvider) {
-                paginationTemplateProvider.setPath('/angular-test-4/bower_components/angularUtils-pagination/dirPagination.tpl.html');
+                var path = (window.location.hostname === '52.35.179.136') ? '/angular-test-4/bower_components/angularUtils-pagination/dirPagination.tpl.html' : 'bower_components/angularUtils-pagination/dirPagination.tpl.html';
+                paginationTemplateProvider.setPath(path);
             });
 }());
