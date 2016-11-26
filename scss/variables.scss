@@ -1,0 +1,15 @@
+/*
+ONLY variables, no code here! 
+*/
+
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
+
+/*Custom variables*/
+$sans-serif: Arial, Helvetica, sans-serif;
+$serif: "Times New Roman", Times, serif;
+$dropbox-border-width: 5px;
+$dropbox-size: 300px;
+
+/*Bootstrap variables are below*/
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+$grid-float-breakpoint: $screen-md-min;
