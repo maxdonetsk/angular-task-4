@@ -22,6 +22,6 @@
                             });
                 }])
             .config(function (paginationTemplateProvider) {
-                paginationTemplateProvider.setPath('/bower_components/angularUtils-pagination/dirPagination.tpl.html');
+                paginationTemplateProvider.setPath('/app/common/dirPagination.tpl.html');
             });
 }());
