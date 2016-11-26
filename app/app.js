@@ -5,7 +5,8 @@
             .module('app', [
                 'ui.bootstrap',
                 'ui.router',
-                'ngSanitize'])
+                'ngSanitize',
+                'ui.select'])
             .config(['$urlRouterProvider', function ($urlRouterProvider) {
                     $urlRouterProvider.otherwise('dashboard');
                 }])

@@ -30,10 +30,15 @@ Example: @include calc(height, 50% - 10px);
 Mixin for form-control-focus.
 Example: @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
 */
+/***Form***/
+.ui-select-search {
+  width: 100% !important; }
+
+/***End of Form***/
 /***Table***/
 #ms-table tbody > tr:hover {
   cursor: pointer; }
 
-/***Table***/
+/***End of Table***/
 
 /*# sourceMappingURL=custom.css.map */

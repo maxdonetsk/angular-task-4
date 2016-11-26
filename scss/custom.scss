@@ -9,10 +9,18 @@ Write custom rules here ONLY!
 
 
 
+/***Form***/
+.ui-select-search {
+    width: 100% !important;
+}
+/***End of Form***/
+
+
+
 /***Table***/
 #ms-table {
     tbody > tr:hover {
         cursor: pointer;
     }
 }
-/***Table***/
+/***End of Table***/
